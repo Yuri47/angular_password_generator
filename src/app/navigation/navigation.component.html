@@ -6,7 +6,13 @@
     right: 0;
     padding: 10px;">
       <mat-icon (click)="switchTheme()" class="pointer">{{icon}}</mat-icon>
+
+      <img src="assets/images/bra.png" (click)="selectLanguage('pt-BR')" alt="brazil flag" class="flag">
+      <img src="assets/images/usa.png" (click)="selectLanguage('en-US')" alt="united states flag" class="flag">
     </div>
+
+
+
     <router-outlet></router-outlet>
 
 

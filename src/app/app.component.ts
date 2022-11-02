@@ -1,5 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, HostBinding, Inject, Renderer2 } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Language } from './_models/password.model';
 
 @Component({
   selector: 'ctn-root',
@@ -8,7 +10,8 @@ import { Component, HostBinding, Inject, Renderer2 } from '@angular/core';
 })
 export class AppComponent {
 
-  constructor(@Inject(DOCUMENT) private document: Document, private renderer: Renderer2){}
+  constructor(@Inject(DOCUMENT) private document: Document,
+  private renderer: Renderer2){}
 
 
   isDark: boolean = true
@@ -26,6 +29,8 @@ export class AppComponent {
       this.renderer.setAttribute(this.document.body, 'class', 'theme-light')
     }
   }
+
+
 
 
 

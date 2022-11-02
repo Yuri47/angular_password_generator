@@ -2,6 +2,8 @@ import { Component, ChangeDetectionStrategy, Output, EventEmitter } from '@angul
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { TranslateService } from '@ngx-translate/core';
+import { Language } from '../_models/password.model';
 
 @Component({
   selector: 'ctn-navigation',
@@ -17,7 +19,7 @@ export class NavigationComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver,  private translateService: TranslateService) {}
 
   @Output('theme') theme = new EventEmitter()
   icon: string = 'dark_mode'
@@ -25,6 +27,10 @@ export class NavigationComponent {
   switchTheme(){
     this.icon = this.icon == 'light_mode' ? 'dark_mode' : 'light_mode'
     this.theme.emit(this.icon)
+  }
+
+  selectLanguage(language: Language) {
+    this.translateService.use(language)
   }
 
 }

@@ -1,0 +1,13 @@
+{
+  "title": "Força da Senha",
+  "subtitle": "Teste a força da sua senha.",
+  "password": "Senha",
+  "password_message": {
+    "length": "Mínimo seis caracteres.",
+    "lower_case": "Dois caracteres minúsculos.",
+    "upper_case": "Dois caracteres maiúsculos.",
+    "numeric": "Dois caracteres numéricos.",
+    "special": "Dois caracteres especiais."
+  }
+}
+
