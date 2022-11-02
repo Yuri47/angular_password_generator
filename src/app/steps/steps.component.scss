@@ -1,0 +1,15 @@
+@import '../../styles.scss';
+
+.ctn_primary {
+  color: $ctn_primary;
+}
+
+.ctn_warn {
+  color: $ctn_warn;
+}
+
+.containerStep {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

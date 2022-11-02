@@ -1,0 +1,6 @@
+<div class="containerStep" [ngClass]="stepClass">
+  <mat-icon>{{stepClass == 'ctn_primary' ? 'check' : 'close'}}</mat-icon>
+  <span>
+    <ng-content></ng-content>
+  </span>
+</div>
