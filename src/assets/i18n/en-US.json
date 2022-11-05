@@ -2,6 +2,7 @@
   "title": "Password Strong",
   "subtitle": "Test your password strong.",
   "password": "Password",
+  "generate_password": "Generate Password",
   "password_message": {
     "length": "Minimum six characters.",
     "lower_case": "Two lowercase characters.",

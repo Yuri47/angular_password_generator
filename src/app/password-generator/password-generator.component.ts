@@ -29,6 +29,26 @@ export class PasswordGeneratorComponent implements OnInit {
     this.passwordStrong += PasswordService.verifyDigits(pass)
   }
 
+  getPassword() {
+    //Available characters
+    const chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJLMNOPQRSTUVWXYZ)(¨&*%$#!@[]{}~^;:,./?=+|";
+    let passwordLength = 10;
+    let password = "";
+
+    for(let index = 0; index < passwordLength; index++) {
+      let randomNumber = Math.floor(Math.random() * chars.length);
+      password += chars.substring(randomNumber, randomNumber + 1);
+    }
+    //setting input password form with new password generated
+    this.password = password
+    //testing password strong
+    this.processPassword()
+
+    if(this.passwordStrong < 100){ //if the generated password haven't strong equals 100 rerun this function
+      this.getPassword()
+    }
+  }
+
   ngOnInit(): void {
   }
 

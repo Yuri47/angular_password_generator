@@ -2,6 +2,7 @@
   "title": "Força da Senha",
   "subtitle": "Teste a força da sua senha.",
   "password": "Senha",
+  "generate_password": "Gerar Senha",
   "password_message": {
     "length": "Mínimo seis caracteres.",
     "lower_case": "Dois caracteres minúsculos.",
